@@ -1,4 +1,4 @@
-use actix_web::{delete, get, post, web, App, HttpResponse, HttpServer, Path, Responder};
+use actix_web::{delete, get, post, web::Path, HttpResponse};
 
 #[get("/tweets/{id}/likes")]
 pub async fn get_likes_by_tweet(path: Path<(String,)>) -> HttpResponse {

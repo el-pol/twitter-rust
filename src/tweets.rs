@@ -1,4 +1,4 @@
-use actix_web::{delete, get, post, web, App, HttpResponse, HttpServer, Path, Responder};
+use actix_web::{get, post, web::Path, HttpResponse};
 
 // API Tweets
 #[get("/tweets")]
