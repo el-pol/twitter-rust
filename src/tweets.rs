@@ -1,7 +1,14 @@
 use actix_web::{get, post, web::Path, HttpResponse};
+use chrono::NaiveDateTime;
+use uuid::Uuid;
 
 use crate::constants::APPLICATION_JSON;
 
+struct Tweet {
+    id: Uuid,
+    created_at: NaiveDateTime,
+    message: String,
+}
 // API Tweets
 #[get("/tweets")]
 pub async fn get_tweets() -> HttpResponse {
